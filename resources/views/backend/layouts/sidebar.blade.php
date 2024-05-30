@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="index.html">
+            <a class="nav-link collapsed" href="{{ route('admin.dashboard') }}">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -15,17 +15,17 @@
             </a>
             <ul id="products" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="components-alerts.html">
+                    <a href="{{ route('admin.product.create') }}">
                         <i class="bi bi-circle"></i><span>Add Product</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-accordion.html">
+                    <a href="{{ route('admin.product.index') }}">
                         <i class="bi bi-circle"></i><span>Product List</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-badges.html">
+                    <a href="{{ route('admin.category.index') }}">
                         <i class="bi bi-circle"></i><span>Categories</span>
                     </a>
                 </li>

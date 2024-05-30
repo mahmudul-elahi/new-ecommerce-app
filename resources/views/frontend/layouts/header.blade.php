@@ -61,7 +61,7 @@
                             </li>
 
                             <li>
-                                <form method="POST" action="{{ route('logout') }}">
+                                <form method="POST" action="{{ route('admin.logout') }}">
                                     @method('DELETE')
                                     @csrf
                                     <button class="logout-button" type="submit">Logout</button>

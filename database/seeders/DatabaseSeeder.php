@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Gender;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Password;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,21 +16,15 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::create([
+            'first_name' => 'Mahmudul',
+            'last_name' => 'Elahi',
+            'email' => 'admin@admin.com',
+            'password' => Password::hash('test1234')
+        ]);
 
         $this->call(LaratrustSeeder::class);
 
-        Gender::factory()->create([
-            'name' => 'Male'
-        ]);
-        Gender::factory()->create([
-            'name' => 'Female'
-        ]);
-        Gender::factory()->create([
-            'name' => 'Other'
-        ]);
+        $this->call(CategorySeeder::class);
     }
 }

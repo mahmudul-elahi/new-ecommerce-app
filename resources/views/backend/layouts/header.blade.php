@@ -212,10 +212,15 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <i class="bi bi-box-arrow-right"></i>
-                            <span>Sign Out</span>
-                        </a>
+                        <form action="{{ route('admin.logout') }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+
+                            <button class="dropdown-item d-flex align-items-center" href="#" type="submit">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Logout</span>
+                            </button>
+                        </form>
                     </li>
 
                 </ul><!-- End Profile Dropdown Items -->
